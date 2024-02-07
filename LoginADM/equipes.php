@@ -15,7 +15,7 @@ if (isset($_POST['nome']) &&
 
 // Atualizar EQUIPES
 if (isset($_POST['id_equipe']) && isset($_POST['atualizar_nome']) && isset($_POST['atualizar_cor']) && isset($_POST['atualizar_modalidade'])&& isset($_POST['atualizar_participantes'])) {
-    $equipeController->atualizarEquipe($_POST['id_modalidade'], $_POST['atualizar_nome'], $_POST['atualizar_cor'], $_POST['atualizar_modalidade'], $_POST['atualizar_participantes']);
+    $equipeController->atualizarEquipe($_POST['id_equipe'], $_POST['atualizar_nome'], $_POST['atualizar_cor'], $_POST['atualizar_modalidade'], $_POST['atualizar_participantes']);
 }
 
 // Excluir EQUIPES

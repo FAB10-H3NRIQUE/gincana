@@ -21,17 +21,17 @@ class EquipeModel {
     }
 
     // Model para atualizar Equipes
-    public function atualizarEquipe($id, $nome, $cor, $modalidade, $participantes) {
+    public function atualizarEquipe($id_equipe, $nome, $cor, $modalidade, $participantes) {
         $sql = "UPDATE equipes SET nome = ?, cor = ?, modalidade = ?, participantes = ? WHERE id = ?";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome, $cor, $modalidade, $participantes, $id]);
+        $stmt->execute([$nome, $cor, $modalidade, $participantes, $id_equipe]);
     }
     
     // Model para deletar Equipe
-    public function excluirEquipe($id) {
+    public function excluirEquipe($id_equipe) {
         $sql = "DELETE FROM equipes WHERE id = ?";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$id]);
+        $stmt->execute([$id_equipe]);
     }
 }
 ?>
